@@ -1,184 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Help</title>
-	<meta charset="UTF-8">
-	<style>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#c2").hide();
+
+    $("button").click(function(){
+        $("#c2").show();
+    });
+});
+
+</script>-->
 
 
-
-.flip span{
-    font-size: 16px;
-    padding: 10px;
-    background-color: yellow;
-    text-align: center;
-    color: black;
-    border: solid 1px FFFF33;
-    margin: auto;
-}
-
-.Category1, .Category2, .Category3{
-	text-align: center;
-	margin-top:10px;
-}
-
-.flip{
-	text-align: center;
-
-}
-
-#panel {
-    display: none;
-    text-align: center;
-    background-color: #b0b0b0;
-    margin-top: 10px;
-    width: 150px;
-    height: 130px;
-}
-
-#panel span{
-	text-align: center;
-}
-
-
-</style>
-</head>
 
 <link rel="stylesheet" type="text/css" href=" /Users/Sunflower/Documents/Web programming/group project/help.css" />
 </head>
 
 <body>
-	<div class="websiteHeader">
+<div class="websiteHeader">
 	<h1>X<span>ports4U</span></h1>
-	<!-- <div class="slogan">
-	<p>Slogan goes here</p>
-	</div> -->
-</div>
+ </div>
 
 <ul>
     <li><a class="s1" href="#home">Home Page</a></li>
     <li><a class="s2" href="#About Us">About Us</a></li>
     <li><a class="s3" href="#Contact Us">Contact Us</a></li>
-    <li><a class="s4" href="#Online Question Form">Feedback</a></li>
- </ul>
+ </ul><br/>
 
- <h3 style="text-align:center;"><strong>Frequented asked Questions</strong></h3>
 
-<!-- <div class="Login">
-	<h4>Login Questions</h4>
-    <p><h5>Question 1?</h5></p>      
-    <p><h5>Answer:</h5></p>
+
+ <div class="faq">
+ 	<p>Frequented asked Questions</p>
+
+<div class="q1"><a href="faq.html"><img src="login.jpg" alt="Login Questions"/></a>
+	<div class="q11">How can I log in the system?</div>
 </div>
 
-<div class="Membership Questions">
-	<h4>Membership Questions</h4>
-    <p><h5>Question 1?</h5></p>      
-    <p><h5>Answer:</h5></p>
+<div class="q2"><a href="faq.html"><img src="training.jpg" alt="Training Questions"/></a>
+	<div class="q11">How can I find a trainer?</div>
 </div>
 
-<div class="Payment Questions">
-	<h4>Payment Questions</h4>
-    <p><h5>Question 1?</h5></p>      
-    <p><h5>Answer:</h5></p>
-</div> -->
-<div class="Category1">
-<p class="flip" onclick="myFunction()"><span>Login Questins</span></p>
-<div id="panel">
-  <p><span>Q1. Why ...</span></p>
-  <p><span>Answer: ....</span></p>
-  <p><span>Q2. What ...</span></p>
-  <p><span>Answer: ...</span></p>
-</div>
+
+<div class="q3"><a href="faq.html"><img src="members.jpg" alt="Membership Questions"/></a>
+	<div class="q11">How to become our member?</div>
 </div>
 
-<div class="Category2">
-<p class="flip" onclick="myFunction()"><span>Membership Questins</span></p>
-<div id="panel">
-  <p>Q1. Why ...</p>
-  <p>Answer: .....</p>
-  <p>Q2. What ...</p>
-  <p>Answer: ...</p>
-</div>
+<div class="q4"><a href="faq.html"><img src="payment.jpg" alt="Payment Questions"/></a>
+	<div class="q11">How can I pay my training fees?</div>
 </div>
 
-<div class="Category3">
-<p class="flip" onclick="myFunction()"><span>Payment Questins</span></p>
-<div id="panel">
-  <p>Q1. Why ...</p>
-  <p>Answer: .....</p>
-  <p>Q2. What ...</p>
-  <p>Answer: ...</p>
 </div>
-</div><br>
-
-<script>
-function myFunction() {
-    document.getElementById("panel").style.display = "block";
-}
-</script>
-
-
-<!-- <table width="90%" cellspacing="10" align:center>
-	<tr>
-		<td align=center valign=center>
-		<form name="frmContactUs" id="frmContactUs" action="/Contact/" method="POST" onsubmit="return _CF_checkfrmContactUs(this)">
-				<table>
-					<tr class="FormFieldC">
-						<td nowrap>First Name:</td>
-						<td><input name="FirstName" id="FirstName"  type="text" maxlength="25"  size=50"></td>
-					</tr>
-
-					<tr class="FormFieldD">
-						<td>Last Name:</td>
-						<td>
-							<input name="LastName" id="LastName"  type="text" maxlength="25"  size="50">
-						</td>
-					</tr>
-
-					<tr class="FormFieldF">
-						<td>Email:</td>
-						<td>
-							<input name="email" id="email"  type="text" maxlength="80"  size="50"  />
-						</td>
-					</tr>
-
-					<tr valign="top" class="FormFieldG">
-						<td>Comments:</td>
-						<td>
-							<textarea name="Comments" rows=6 cols=50></textarea>
-						</td>
-					</tr>
-
-
-					<tr class="FormFieldI">
-						<td>&nbsp;</td><td><input type=submit size=20 value="SUBMIT" name="submit"></td>
-					</tr>
-				</table>
-			</form>
-
-		</td>
-	</tr>
-</table>
- -->
 
 <form action="submitted.html" align="center" method="post">
-	First Name:	<span class="b1"><input type="text" name="firstname"></span><br/>
-	Last&nbspName: <input type="text" name="lastname"><br/>
-	Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="firstname"><br/>
-	Subject:<select name="subject">
-		<option value="type">---Please select the question type---</option>
-		<option value="login">Login Questions</option>
-		<option value="member">Membership Questions</option>
-		<option value="payment">Payment Questions</option>
-		<option value="others">Others</option>
-	</select><br/>
-	<textarea name="message" row="250" cols="80">Please write your comments here ... </textarea><br/>
-	<input type="submit" value="Submit">
-	<input type="reset" value="Reset">
+				<table>
+					
+					<tr>
+						<td>First Name:</td>
+						<td><input name="FirstName" type="text" maxlength=25  size=50><font color="#FF0000">*</font></td>
+					</tr>
+					
+
+					<tr>
+						<td>Last Name:</td>
+						<td><input name="LastName" type="text" maxlength=25  size=50><font color="#FF0000">*</font></td>
+					</tr>
+				
+
+					<tr>
+						<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEmail:</td>
+						<td><input name="email" type="text" maxlength=80 size=50><font color="#FF0000">*</font>
+</td>
+					</tr>
+					
+
+					<tr>
+						<td>Comments:</td>
+						<td><textarea name="Comments" rows=8 cols=50></textarea><font color="#FF0000">*</font></td>
+
+					</tr>
+
+
+					<tr>
+						<td colspan=2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Submit" name="Submit">&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Reset" name="Reset"></td>
+						
+					</tr>
+					
+				
+				</table>
+			
 </form>
 
-<!-- <div id="footer">Copyright © Xports4U.com 2015</div> -->
-<footer style="background-color:gray margin-bottom=0;" align=center><h6>Copyright © Xports4U.com 2015</h6></footer>
+<div class="footer">All copyrights reserved</div>
 
 </body>
 </html>
