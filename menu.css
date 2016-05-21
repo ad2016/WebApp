@@ -1,0 +1,221 @@
+.h1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family:Open Sans;
+}
+
+.h1 li {
+    float: left;
+}
+
+.h1 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   
+}
+
+.h1 li a:hover:not(.active) {
+   color: #bbbbbb;
+
+}
+
+#home
+{
+    font-size: 24px;
+   
+ 
+}
+
+/* temporary fix */
+.nav
+{
+  margin-top: 6px;
+}
+
+
+
+#footer
+{   
+    width:100%;
+    background-color:#333;
+    color:white;
+    text-align:center;
+    /*padding:15px; */
+    position:fixed; 
+    bottom:0;
+    /*height:60px; */
+}
+
+
+body
+{
+    
+   height:100%;
+   background-color:#F2F2F2;
+   margin: 0;
+   
+}
+
+/* ---------SIGN IN/UP ---------*/
+#signup
+{
+    
+    border:1px solid navy;
+    padding:25px;
+    margin:5px;
+    /*margin-bottom: 120px; */
+    width:400px;
+    background-color: #4682B4;
+    position:relative;
+    left:80px;
+    top:40px;
+}
+
+
+#signin
+{
+    
+    border:1px solid navy;
+    padding:25px;
+    margin:5px;
+    width:400px;
+    background-color: #4682B4;
+    position: absolute;
+    top:150px;
+    right:180px;
+}
+
+
+/* -------CONTACT US------ */
+
+#map {
+        float:left;
+        position: relative;
+        top:30px;
+      }
+}
+
+#container
+{   
+     
+    float:right;
+    /*
+    border:1px solid navy;
+    padding:25px;
+    margin:5px;
+    width:400px;
+    background-color: #4682B4;
+    position:absolute;
+    top:150px;
+    right:180px; 
+    */
+}
+#address
+{
+    
+    border:1px solid navy;
+    padding:25px;
+    margin:5px;
+    width:400px;
+    background-color: #4682B4;
+    position: absolute;
+    top:350px;
+    right:180px;
+}
+
+
+/*---------TRAINER PROFILE------------------*/
+
+
+#TrainerInfo
+{
+    height:400px;
+    width:250px;
+    border: 2px solid black;
+    margin: 15px;
+    margin-left: 15px;
+    position: relative;
+    margin-top: 60px;
+    padding-left: 8px;
+    padding-right: 10px;
+    padding-top: 20px;
+
+
+}
+
+#userinfodiv
+{
+    margin-left: 10px;
+    padding:20px;
+
+}
+
+.profilepic
+{
+    margin-left: 20px;
+
+    border: 2px, solid , black;
+    margin-top: 10px;
+}
+
+#Tschedule
+{
+    padding:25px;
+    margin:5px;
+    width:400px;
+    position: absolute;
+    top:150px;
+    right:680px;
+    margin-left: 85px;
+}
+}
+#schedule
+{
+    font-size:1.50em;
+    font-weight:bold;
+    position:center;
+
+}
+
+#EventHistory
+{
+    padding:25px;
+    margin:5px;
+    width:400px;
+    position: absolute;
+    top:150px;
+    right:180px;
+}
+
+
+#Ebutton
+{
+    position: absolute;
+    bottom:120px;
+    right:640px;
+}
+
+
+#EventButton
+{
+    
+    padding:10px;
+    border-radius: 2px;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+
+
