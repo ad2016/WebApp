@@ -2,23 +2,6 @@
 <body>
 
 <?php
-//create myDB
-$servername = "localhost";
-$username = "root";
-$password = "root";
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully<br>";
-$sql = "CREATE DATABASE myDB";
-if($conn->query($sql)===TRUE){
-    echo "Database created successfully";
-}else{
-    echo "Error creating database: " . $conn->error;
-}
 
 //create connection to myDB
 $servername = "localhost";
@@ -36,7 +19,7 @@ echo "Connected successfully<br>";
 
 //Create table of user profiles
 // photo address will be saved
-// Rating is for later use; here it's saved as a varchar, 
+// Rating is for later use; here it's saved as a varchar,
 // therefore we need to save the rating as a string before we save it
 // Javascript commands related: toPrecision()
 /*
@@ -50,7 +33,7 @@ PersonalProfile{
   Photo;
   Rating (Trainer);
 
-  // nice to have 
+  // nice to have
   Hobbies;
   AboutMe;
   Area:
@@ -62,7 +45,7 @@ FirstName VARCHAR(50) NOT NULL,
 LastName VARCHAR(50) NOT NULL,
 PaypalEmail VARCHAR(255),
 Phone VARCHAR(50),
-PhotoAddress VARCHAR(255), 
+PhotoAddress VARCHAR(255),
 Rating VARCHAR(50)
 )";
 
@@ -95,7 +78,7 @@ RegularEvent{
   EventType(What sport);
   MaxPeople;
   CurrentPeople;
-  Professional level: professional entry-level medium semi-professional
+  Professional level: professional entry-level medium semi-professional value: 0, 1, 2, 3
 
 //nice to have option:
 hrs
@@ -112,7 +95,7 @@ Location VARCHAR(50) NOT NULL,
 Type VARCHAR(50) NOT NULL,
 MaxPeople INT NOT NULL,
 CurrentPeople INT NOT NULL,
-Professional_level VARCHAR(50) NOT NULL
+Professional_level INT NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -124,7 +107,7 @@ if ($conn->query($sql) === TRUE) {
 //insert into REvent
 $sql = "INSERT INTO REvent (TimeYY, TimeMM, TimeDD, TimeHH, Status, Location,
         Type, MaxPeople, CurrentPeople, Professional_level)
-    VALUES (2016, 05, 15, 16, 0, 'SF', 'football', 10, 1, 'medium')";
+    VALUES (2016, 05, 15, 16, 0, 'SF', 'football', 10, 1, 1)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -140,7 +123,7 @@ TrainingEvent{
 must have
    TEventID; primary key auto incre
     Time:  4 columns: YY MM DD HH;
-   EventStatus: 0: open request 1:trainer waiting for payment  2: payment accepted, scheduled 3: finished 
+   EventStatus: 0: open request 1:trainer waiting for payment  2: payment accepted, scheduled 3: finished
    Location;
    EventType(What sport)
 }
@@ -155,7 +138,7 @@ TimeHH INT NOT NULL,
 Status INT NOT NULL,
 Location VARCHAR(50) NOT NULL,
 Type VARCHAR(50) NOT NULL,
-Professional_level VARCHAR(50) NOT NULL
+Professional_level INT NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -166,7 +149,7 @@ if ($conn->query($sql) === TRUE) {
 
 $sql = "INSERT INTO TEvent(TimeYY, TimeMM, TimeDD, TimeHH, Status, Location,
         Type, Professional_level)
-    VALUES (2016, 05, 17, 13, 0, 'SF', 'football', 'medium')";
+    VALUES (2016, 05, 17, 13, 0, 'SF', 'football', 1)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -309,7 +292,7 @@ if ($conn->query($sql) === TRUE) {
 */
 
 //General Format for SELECT and DISPLAY from table
-//please refer to w3a.php for a more detailed example about how to retrieve data 
+//please refer to w3a.php for a more detailed example about how to retrieve data
 //from database and display it in our webpage
 /*
 $result = $conn->query("SELECT ID, Days, Hours, Cities, ATypes FROM Event");
